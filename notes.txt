@@ -1,0 +1,11 @@
+deraied states => state thats computed from an existing peice of state or from props 
+three seprate peice of state even through num items a nd total price depend on cart 
+1.yha teen ki jarurat ni h ku ki ye dono cart ki state pr depend kr rhi h  so we do not need num items state an dtotal price 
+2. need to keep them in sync (update togather)
+3. 3 states update will cause 3 renders
+// so we can derive the state from the cart and use it in to seprate 
+1, we can use regular variables , no use state
+2. cart state is the single source of truth for this related data
+3. works because re rendering component will automaticlly re calculate derived state
+/////////////////////////////////////////////
+practical like stats we need a length of the items so we mention it in the new variable and pass as prop => so what happen here is whenever the items state updates the app will we render and again call the fxn and get the num items get update
